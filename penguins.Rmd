@@ -7,5 +7,25 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+# We can output penguins to knitted document using 
+# glimpse(penguins)
+# head(penguins) 
+```
+
+Making ggplot graphs of penguin data! 
+
+Scatterplot of body mass versus flipper length: 
+
+```{r}
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + 
+  geom_point(aes(color = species)) 
+                  # AES IS SPECIFICALLY FOR MATCHING VARIABLES WITH SPECIFIC AESTHETICS  
+  
+
 ```
 
