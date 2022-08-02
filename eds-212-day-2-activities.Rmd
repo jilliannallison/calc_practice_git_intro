@@ -35,7 +35,23 @@ der_3 <- deriv(expr_3, "t")
 t <- 0
 eval(der_3)
 
-
 ```
 
+ggplot practice with PENGUINS! 
+
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + 
+  geom_point(aes(color = species)) + 
+  labs(x = "Bill Length (mm)", 
+       y = "Bill Depth (mm)",
+       title = "Relationship between bill length and bill depth in penguins")
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) + 
+  geom_jitter(aes(color = species)) + 
+  labs(x = "Species", 
+       y = "Flipper Length (mm)",
+       title = "Flipper Length by Penguin Species")
+```
 
