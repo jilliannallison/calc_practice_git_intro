@@ -1,0 +1,43 @@
+---
+title: "Calculus Practice & Git Intro"
+author: "Jillian Allison"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Derivatives in R
+
+Find the derivative of $f(x) = 5x^2$ (formatted using LATEX)
+
+```{r}
+expression_1 <- expression(5 * x ^ 2)
+              # expression function makes our handwritten expressions recognizable by R...                        especially important with variables
+
+derivative_1 <- deriv(expression_1, "x") 
+              # give expression that we want to take derivative of, and specify which variable we're               taking derivative in respect to 
+
+# I want to find slope at x = 2.8... we could use seq() to run through a bunch of x values!
+x <- 2.8
+eval(derivative_1) 
+              # Use eval to evaluate derivatives at any value of x
+
+```
+
+Another way of doing derivatives
+
+Find the slope of $g(z) = 2z^3 - 10.5z^2 + 4.1$
+
+```{r}
+gz <- expression(2*z^3 - 10.5*z^2 + 4.1) # creating expression
+
+dg_dz <- D(gz, "z") # derivative expression
+dg_dz
+
+z <- seq(from = -3, to = 4, by = 0.5) # creating sequence to evaluate derivatives at all values
+
+eval(dg_dz) # Evaluate derivative using sequence values of z
+```
