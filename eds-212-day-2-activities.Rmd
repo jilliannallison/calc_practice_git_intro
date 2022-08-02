@@ -1,0 +1,41 @@
+---
+title: "Day 2 Calc Practice"
+author: "Jillian Allison"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Calculus Practice
+```{r}
+# create an expression
+expr_1 <- expression(x^2)
+# use deriv() to find derivative of already created expression 
+der_1 <- deriv(expr_1, "x")
+# set x value
+x <- 3
+# evaluate derivative at x value 
+eval(der_1)
+
+# next problem, variable a
+expr_2 <- expression((2 * (3*a + 2)^4 - 5)) 
+der_2 <- deriv(expr_2, "a") 
+a <- 1.2 
+eval(der_2)
+
+
+# final problem, variable t
+expr_3 <- expression((-4 * t)/(t^2 + 1)^3) 
+der_3 <- deriv(expr_3, "t")
+t <- 0
+eval(der_3)
+
+
+```
+
+
