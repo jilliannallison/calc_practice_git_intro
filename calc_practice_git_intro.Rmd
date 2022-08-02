@@ -43,3 +43,5 @@ eval(dg_dz) # Evaluate derivative using sequence values of z
 ```
 
 I added some stuff! for git practice! 
+
+and more fun cool practice! 
