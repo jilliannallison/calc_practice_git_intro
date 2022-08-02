@@ -42,6 +42,5 @@ z <- seq(from = -3, to = 4, by = 0.5) # creating sequence to evaluate derivative
 eval(dg_dz) # Evaluate derivative using sequence values of z
 ```
 
-I added some stuff! for git practice! 
 
-and more fun cool practice! 
+
