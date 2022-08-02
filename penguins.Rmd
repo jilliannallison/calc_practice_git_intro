@@ -23,8 +23,16 @@ Scatterplot of body mass versus flipper length:
 
 ```{r}
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + 
-  geom_point(aes(color = species)) 
+  geom_point(aes(color = species)) +
                   # AES IS SPECIFICALLY FOR MATCHING VARIABLES WITH SPECIFIC AESTHETICS  
+  facet_wrap(~island) +  # THIS MAKES COOL DIFFERENT SECTIONS IN THE PLOT BASED ON EACH ISLAND
+  theme_minimal() + # preset themes
+  labs(x = "Body Mass (g)", 
+       y = "Flipper Length (mm)",
+       title = "Penguin Body Mass vs Flipper Length")
+
+
+
   
 
 ```
